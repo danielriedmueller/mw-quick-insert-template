@@ -1,0 +1,48 @@
+{
+	"name": "QuickInsertTemplates",
+	"author": [
+		"Daniel Riedmüller"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:QuickInsertTemplates",
+	"descriptionmsg": "quickinserttemplates-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\QuickInsertTemplates\\": "src/"
+	},
+	"config": {
+		"QuickInsertTemplatesAvailableTemplates": {
+			"description": "Write 'QuickInsertTemplates was here' on each page",
+			"value": false
+		}
+	},
+	"HookHandlers": {
+		"QuickInsertTemplatesHooks": {
+			"class": "MediaWiki\\Extension\\QuickInsertTemplates\\Hooks"
+		}
+	},
+	"Hooks": {
+		"OutputPageBeforeHTML": "QuickInsertTemplatesHooks"
+	},
+	"MessagesDirs": {
+		"QuickInsertTemplates": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.quickInsertTemplates": {
+			"localBasePath": "resources/ext.quickInsertTemplates",
+			"remoteExtPath": "QuickInsertTemplates/resources/ext.quickInsertTemplates",
+			"dependencies": [],
+			"styles": [],
+			"packageFiles": [
+				"init.js"
+			],
+			"messages": []
+		}
+	},
+	"manifest_version": 2
+}
