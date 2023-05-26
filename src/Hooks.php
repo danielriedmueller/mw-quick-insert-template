@@ -39,6 +39,7 @@ class Hooks implements \MediaWiki\Hook\BeforePageDisplayHook {
             $out->addModules( 'ext.quickInsertTemplates' );
             $tpl = new InsertButtonTemplate();
             $tpl->set('templates', $templates );
+            $tpl->set('page', $out->getTitle() );
             $out->addTemplate($tpl);
         }
     }

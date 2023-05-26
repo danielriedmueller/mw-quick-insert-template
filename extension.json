@@ -15,8 +15,8 @@
 	},
 	"config": {
 		"QuickInsertTemplatesAvailableTemplates": {
-			"description": "Write 'QuickInsertTemplates was here' on each page",
-			"value": false
+			"description": "Defines the available templates for the quick insert feature.",
+			"value": []
 		}
 	},
 	"HookHandlers": {
@@ -39,7 +39,7 @@
 			"dependencies": [],
 			"styles": [],
 			"packageFiles": [
-				"init.js"
+				"insertTemplate.js"
 			],
 			"messages": []
 		}
